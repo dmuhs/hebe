@@ -1,8 +1,0 @@
-- write README
-- add support and docs for
-    - Google Analytics
-    - Disqus
-    - pygments support like Flex
-    - pelicanconf
-- add Travis CI and test installation
-- add better screenshot
