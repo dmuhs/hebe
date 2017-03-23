@@ -1,0 +1,7 @@
+- write README
+- add support and docs for
+    - Google Analytics
+    - Disqus
+    - pygments support like Flex
+- add Travis CI and test installation
+- add screenshot

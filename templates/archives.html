@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<dl id="archive-list">
+{% for article in dates %}
+    <div class="archive-entry">
+        <dt>
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+        </dt>
+        <dd>
+            <p>{{ article.locale_date }}</p>
+            <p><a class="underline kinda-special" href="{{ article.category.url }}">{{ article.category.name }}</a></p>
+        </dd>
+    </div>
+{% endfor %}
+</dl>
+{% endblock %}

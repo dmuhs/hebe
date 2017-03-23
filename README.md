@@ -1,2 +1,4 @@
 # hebe
-A minimalistic Pelican theme
+A truly minimalist Pelican theme.
+
+![Screenshot](screenshot.png)

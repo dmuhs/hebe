@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    {% endblock head %}
+</head>
+
+<body id="index" class="home">
+    <header id="banner" class="body">
+        <h1 class="rotate"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    </header><!-- /#banner -->
+    <div id="nav-wrapper">
+    <nav id="menu"><ul>
+        {% if LINKS %}
+		    {% for name, url in LINKS %}
+			    <li class="menu-item"><a class="underline" target="_blank" href="{{ url }}">{{ name }}</a></li>
+			{% endfor %}
+		{% endif %}
+        {% for title, link in MENUITEMS %}
+            <li><a class="underline" href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+        {% if DISPLAY_ARCHIVE_ON_MENU %}
+            <li class="menu-item"><a class="underline" href="{{ SITEURL }}/archives.html">Archives</a></li>
+        {% endif %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in pages %}
+                <li class="menu-item"><a class="underline {% if loop.last %} special {% endif %}" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+        {% endif %}
+    </ul></nav><!-- /#menu -->
+    </div>
+    {% block content %}
+    {% endblock %}
+    <footer id="contentinfo" class="body">
+        {% if FOOTER_TEXT %}
+            <p>{{ FOOTER_TEXT }}</p>
+        {% else %}
+            <p>Made with <span id="love">♥</span></p>
+        {% endif %}
+        {% if FEED_ALL_ATOM %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" rel="alternate">✓ Atom Feed</a>
+        {% endif %}
+        <!--{% if FEED_ATOM %} &middot; {% endif %}-->
+        {% if FEED_ATOM %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" rel="alternate">✓ Atom Feed</a>
+        {% endif %}
+        <!--{% if FEED_RSS %} &middot; {% endif %}-->
+        {% if FEED_RSS %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" rel="alternate">✓ RSS Feed</a>
+        {% endif %}
+        <!--{% if FEED_ALL_RSS %} &middot; {% endif %}-->
+        {% if FEED_ALL_RSS %}
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" rel="alternate">✓ RSS Feed</a>
+        {% endif %}
+    </footer><!-- /#contentinfo -->
+    {% if GOOGLE_ANALYTICS %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '{{ GOOGLE_ANALYTICS }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+    {% endif %}
+    <script src="{{ SITEURL }}/theme/js/lightbox-plus-jquery.js"></script>
+</body>
+</html>
