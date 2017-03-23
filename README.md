@@ -6,6 +6,7 @@ A truly minimalist Pelican theme.
 ## Screenshot
 
 ![Post index](screenshot1.png)
+----
 ![Syntax highlighting](screenshot2.png)
 
 ## Features
