@@ -1,10 +1,12 @@
 # hebe
 
 A truly minimalist Pelican theme.
+[Demo site](http://dmuhs.com)
 
 ## Screenshot
 
-![Screenshot](screenshot.png)
+![Post index](screenshot1.png)
+![Syntax highlighting](screenshot2.png)
 
 ## Features
 
