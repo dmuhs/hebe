@@ -3,5 +3,6 @@
     - Google Analytics
     - Disqus
     - pygments support like Flex
+    - pelicanconf
 - add Travis CI and test installation
-- add screenshot
+- add better screenshot
