@@ -164,12 +164,6 @@ a img:not(.lb-image):hover {
     color: #ff5000;
 }
 
-.rotate:hover {
-    -webkit-transform: rotateZ(-1deg);
-    -ms-transform: rotateZ(-1deg);
-    transform: rotateZ(-1deg);
-}
-
 .paginator {
     width: 100%;
     text-align: center;
