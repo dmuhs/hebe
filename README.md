@@ -3,10 +3,14 @@
 A truly minimalist Pelican theme.
 [Demo site](http://dmuhs.com)
 
-## Screenshot
+## Screenshots
+
+### Post Index
 
 ![Post index](screenshot1.png)
-----
+
+### Syntax Theme
+
 ![Syntax highlighting](screenshot2.png)
 
 ## Features
